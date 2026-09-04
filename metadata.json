@@ -1,0 +1,8 @@
+{
+  "name": "Налоговый навигатор_V1",
+  "description": "Сравнение налоговых режимов ИП и ООО с учётом правил налогообложения 2026 года",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

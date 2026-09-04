@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #EBF1F7;
+    color: #0F172A;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Atmospheric blueprint canvas with ambient iridescent/spectral light blooms */
+.blueprint-grid {
+  background-size: 24px 24px, 100% 100%;
+  background-image: 
+    linear-gradient(to right, rgba(148, 163, 184, 0.09) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.09) 1px, transparent 1px),
+    radial-gradient(circle at 10% 8%, rgba(56, 189, 248, 0.16) 0%, transparent 35%),
+    radial-gradient(circle at 90% 18%, rgba(168, 85, 247, 0.16) 0%, transparent 40%),
+    radial-gradient(circle at 50% 55%, rgba(52, 211, 153, 0.14) 0%, transparent 45%),
+    radial-gradient(circle at 20% 85%, rgba(99, 102, 241, 0.14) 0%, transparent 40%);
+  background-attachment: fixed;
+}
+
+/* Master Analytical Dashboard Slab with deep glassmorphic blur and luminous reflection */
+.master-glass-slab {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 
+    0 24px 60px -12px rgba(15, 23, 42, 0.08),
+    0 6px 20px -2px rgba(99, 102, 241, 0.06),
+    inset 0 1.5px 0 rgba(255, 255, 255, 1);
+}
+
+/* Transparent rainbow / spectral iridescent gradient border with glowing glassmorphism */
+.rainbow-border-subtle {
+  position: relative;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.85) 0%, rgba(129, 140, 248, 0.85) 25%, rgba(192, 132, 252, 0.85) 50%, rgba(244, 114, 182, 0.75) 75%, rgba(52, 211, 153, 0.85) 100%);
+  padding: 1.75px;
+  box-shadow: 
+    0 12px 32px -4px rgba(99, 102, 241, 0.22),
+    0 4px 14px -2px rgba(56, 189, 248, 0.18),
+    0 0 0 1px rgba(255, 255, 255, 0.5);
+  transition: all 0.25s ease;
+}
+
+.rainbow-border-subtle:hover {
+  box-shadow: 
+    0 16px 36px -4px rgba(99, 102, 241, 0.28),
+    0 6px 18px -2px rgba(56, 189, 248, 0.24),
+    0 0 0 1.5px rgba(255, 255, 255, 0.7);
+}
+
+.rainbow-border-subtle > .rainbow-inner {
+  background: linear-gradient(165deg, #FFFFFF 0%, #FAFBFC 60%, rgba(236, 253, 245, 0.55) 100%);
+  border-radius: 18.25px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Spectral card container with soft glass rim */
+.spectral-glass-panel {
+  background: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 
+    0 10px 28px -6px rgba(15, 23, 42, 0.05),
+    0 2px 8px -1px rgba(99, 102, 241, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  transition: all 0.2s ease;
+}
+.spectral-glass-panel:hover {
+  border-color: rgba(199, 210, 254, 0.9);
+  box-shadow: 
+    0 14px 34px -6px rgba(15, 23, 42, 0.08),
+    0 4px 12px -1px rgba(99, 102, 241, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+/* Volumetric Tactile Buttons & Toggles */
+.tactile-btn-primary {
+  background: linear-gradient(180deg, #4F46E5 0%, #3730A3 100%);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 
+    0 4px 14px -1px rgba(79, 70, 229, 0.45),
+    0 1px 3px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.15s ease;
+}
+.tactile-btn-primary:hover {
+  background: linear-gradient(180deg, #5B52F2 0%, #4338CA 100%);
+  box-shadow: 
+    0 6px 18px -1px rgba(79, 70, 229, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+.tactile-btn-primary:active {
+  transform: translateY(1px);
+  box-shadow: 
+    0 2px 6px -1px rgba(79, 70, 229, 0.5),
+    inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.tactile-pill-active {
+  background: linear-gradient(180deg, #4F46E5 0%, #3730A3 100%) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 
+    0 3px 10px -1px rgba(79, 70, 229, 0.45),
+    0 1px 2px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35) !important;
+}
+
+.tactile-pill-inactive {
+  background: rgba(255, 255, 255, 0.85);
+  color: #475569;
+  border: 1px solid rgba(203, 213, 225, 0.85);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transition: all 0.15s ease;
+}
+.tactile-pill-inactive:hover {
+  background: #FFFFFF;
+  color: #0F172A;
+  border-color: #A5B4FC;
+  box-shadow: 0 2px 6px rgba(99, 102, 241, 0.1);
+}
+
+/* Saturated Glass Badges with subtle glow */
+.glass-badge-emerald {
+  background: rgba(16, 185, 129, 0.12);
+  color: #065F46;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  box-shadow: 0 0 12px -2px rgba(16, 185, 129, 0.25);
+}
+
+.glass-badge-indigo {
+  background: rgba(99, 102, 241, 0.12);
+  color: #3730A3;
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  box-shadow: 0 0 12px -2px rgba(99, 102, 241, 0.25);
+}
+
+.glass-badge-amber {
+  background: rgba(245, 158, 11, 0.14);
+  color: #92400E;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  box-shadow: 0 0 12px -2px rgba(245, 158, 11, 0.2);
+}
+
+.glass-badge-cyan {
+  background: rgba(6, 182, 212, 0.12);
+  color: #155E75;
+  border: 1px solid rgba(6, 182, 212, 0.35);
+  box-shadow: 0 0 12px -2px rgba(6, 182, 212, 0.2);
+}
+
+.glass-badge-purple {
+  background: rgba(168, 85, 247, 0.12);
+  color: #6B21A8;
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  box-shadow: 0 0 12px -2px rgba(168, 85, 247, 0.2);
+}
+
+/* Dark Accent Card with Holographic Neon Glowing Rim (Stress test card) */
+.metal-glow-wrapper {
+  background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc, #f472b6, #fb923c, #38bdf8);
+  background-size: 200% 200%;
+  padding: 1.75px;
+  border-radius: 22px;
+  box-shadow: 
+    0 0 35px -4px rgba(168, 85, 247, 0.35),
+    0 0 18px -2px rgba(56, 189, 248, 0.3),
+    0 16px 36px -8px rgba(15, 23, 42, 0.4);
+}
+
+.metal-glow-inner {
+  background: linear-gradient(145deg, #161b2e 0%, #0d111d 100%);
+  border-radius: 20.25px;
+}
+
+/* Custom range slider with vivid gradient track & volumetric thumb */
+input[type=range] {
+  accent-color: #4F46E5;
+}
+
+/* Custom subtle scrollbar for tables & modals */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.5);
+}
